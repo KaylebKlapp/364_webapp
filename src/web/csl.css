@@ -1,0 +1,220 @@
+body {
+    background-color: rgb(172, 180, 202);
+    color:navy;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: navy;
+    border:2px solid navy;
+    text-decoration: underline;
+    border-top: 2px solid navy;
+}
+
+a:visited {
+    color: navy;
+    border:2px solid navy;
+    text-decoration: underline;
+    border-top: 2px solid navy;
+}
+
+p1 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 33px;
+    display:grid;
+    text-align: center;
+    color: navy;
+    border:2px solid navy;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+h1 {
+    color:navy;
+    border:3px solid navy;
+    border-style:dashed;
+    outline: 10px solid navy;
+    outline-offset: 4px;
+    outline-width: 10px;
+    font-size: 85px;
+    text-align: center;
+    background-color: gainsboro;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+h2 {
+    color:navy;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+nav {
+    background-color: gainsboro;
+    text-align: center;
+    border: 2px solid navy;
+    font-size: 20px;
+    color: navy;
+}
+
+img {
+    border:3px solid navy;
+    display: block;
+    width:25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site_body {
+    border:3px solid Navy;
+    background-color: gainsboro;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+
+.navtxt:hover {
+    font-size: 25px;
+    color: whitesmoke;
+    border:1px solid navy;
+    background-color: navy;
+}
+.navtxt {
+    font-size: 25px;
+    background-color: gainsboro;
+    text-decoration-color: white;
+    color:navy;
+    border-color: navy;
+
+}
+
+table {
+    border: 3px solid navy;
+    text-align: center;
+    display: block;
+    width:75%;
+    empty-cells: hide;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    row-gap: 10px;
+}
+
+th {
+    color: navy;
+}
+
+tr {
+    border-top: 3px solid navy;
+    background-color: gainsboro;
+}
+
+th, td {
+    border-bottom: 1px solid navy;
+    background-color: whitesmoke;
+  }
+
+th, td, tr {
+    color: navy;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    font-size:25px
+}
+
+
+.gender{
+    align-content: center;
+    text-decoration: none;
+}
+
+form {
+    color:navy;
+    background-color: whitesmoke;
+    border: 3px solid navy;
+    font-size: 25px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+    text-decoration: underline;
+}
+
+input[type=text], input[type=number] {
+    background-color: whitesmoke;
+    border: 1px solid navy;
+    color:navy;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-bottom: 3px solid navy;
+}
+
+input[type=radio] {
+    transform: scale(1.7);
+}
+
+p2 {
+    border-bottom: 2px solid navy;
+}
+
+
+input[type=submit] {
+    width:auto;
+    height:auto;
+    background-color: navy;
+    color: navy;
+    border-color:navy;
+    color: whitesmoke;
+    text-transform: capitalize;
+
+}
+
+input[type=submit]:hover {
+    width:auto;
+    height:auto;
+    background-color: whitesmoke;
+    border-color:navy;
+    color: navy;
+    text-transform: capitalize;
+}
+
+p {
+    font-size: 42px;
+    color: Navy;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.formbody {
+    padding-bottom: 10px;
+    color: navy;
+}
+
+.ball { 
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    background-color: white; 
+    animation: bounce 3s; 
+    animation-direction: alternate; 
+    animation-timing-function: cubic-bezier(.5, 0.05, 1, .5); 
+    animation-iteration-count: infinite; 
+} 
+  
+@keyframes bounce { 
+    from { 
+        transform: translate3d(0, 10px, 0); 
+    } 
+    to { 
+        transform: translate3d(1820px, 10px, 0); 
+    } 
+} 
+
+  
+
+
