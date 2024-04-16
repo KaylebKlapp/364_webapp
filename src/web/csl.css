@@ -36,7 +36,7 @@ h1 {
     outline: 10px solid navy;
     outline-offset: 4px;
     outline-width: 10px;
-    font-size: 85px;
+    font-size: 45px;
     text-align: center;
     background-color: gainsboro;
     padding-top: 15px;
@@ -218,6 +218,10 @@ p {
     } 
 } 
 
+.button {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
   
 
 
