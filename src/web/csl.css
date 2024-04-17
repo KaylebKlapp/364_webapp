@@ -57,7 +57,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333333;
+    background-color: #777777;
   }
   
   li {
@@ -74,7 +74,7 @@ ul {
   
   /* Change the link color to #111 (black) on hover */
   li a:hover {
-    background-color: #00b5fc;
+    background-color: #18617e;
   }
 
 
