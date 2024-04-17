@@ -52,13 +52,31 @@ h2 {
     text-decoration: underline;
 }
 
-nav {
-    background-color: gainsboro;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
     text-align: center;
-    border: 2px solid navy;
-    font-size: 20px;
-    color: navy;
-}
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #00b5fc;
+  }
+
 
 img {
     border:none;
