@@ -169,7 +169,7 @@ th, td, tr {
     text-decoration: none;
 }
 
-form {
+.login_form {
     color:navy;
     background-color: whitesmoke;
     border: 3px solid navy;
@@ -181,6 +181,17 @@ form {
     grid-template-columns: 1fr 1fr;
     padding: 15px;
     text-decoration: underline;
+}
+
+form {
+    color:navy;
+    background-color: whitesmoke;
+    border: 3px solid navy;
+    font-size: 25px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
 }
 
 input[type=text], input[type=number] {
