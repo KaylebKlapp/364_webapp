@@ -183,6 +183,19 @@ th, td, tr {
     text-decoration: underline;
 }
 
+.reserve_form {
+    color:navy;
+    background-color: whitesmoke;
+    border: 3px solid navy;
+    font-size: 25px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+}
+
 form {
     color:navy;
     background-color: whitesmoke;
