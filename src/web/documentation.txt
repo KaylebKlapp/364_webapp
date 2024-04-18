@@ -4,5 +4,6 @@ We used the following w3 schools website to help with the onclick event
 on a button: https://www.w3schools.com/jsref/event_onclick.asp
 Additionally, after recieving approval from Dr. Bouvier, C1C O'Brien and 
 C1C Klapp used code from their previous web development PEX to help develop
-a base for the website, tables, and CSS. Other than that, no other resources 
-were used to complete this assignment. 
+a base for the website, tables, and CSS. Lastly, for the Space-A description,
+we used the official description posted on https://myarmybenefits.us.army.mil/Benefit-Library/Federal-Benefits/Space-Available-Travel-(Space-A-Travel). 
+Other than that, no other resources were used to complete this assignment. 
