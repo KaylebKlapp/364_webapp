@@ -13,7 +13,6 @@
                 <ul>
                     <li><a href = index.html>Home</a></li> 
                     <li><a href = login.html>Login</a></li> 
-                    <li><a href = flight_query.html>Flights</a></li> 
                 </ul>
             </nav>
     
@@ -21,7 +20,7 @@
                 User Login
             </h2>
             
-                <form method="post" class = "login_form">
+                <form method="post" class = "login_form" onsubmit = "return submitForm(this)">
                     <label for="uname">Username: </label><br>
                     <input type="text" name="uname" max="50" placeholder="Enter Username"" required><br>
                     
@@ -30,6 +29,15 @@
                 
                     <input type="submit" value="Submit" /><br>
                 </form>
+                <script>
+                    function submitForm(form){
+                        if (form.checkValidity()){
+                            window.location = 'user_home.html';
+                            return false;
+                        }
+                        return true;
+                    }
+                </script>
     
             
         </div>

@@ -13,6 +13,23 @@ button{
     color: whitesmoke;
     text-transform: capitalize;
     font-size:25px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.user_button{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width:auto;
+    height:auto;
+    background-color: navy;
+    color: navy;
+    border-color:navy;
+    color: whitesmoke;
+    text-transform: capitalize;
+    text-align: center;
+    font-size:25px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 a {
