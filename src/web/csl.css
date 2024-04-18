@@ -63,6 +63,12 @@ h2 {
     text-decoration: underline;
 }
 
+h3 {
+    color:navy;
+    font-size: 25px;
+    text-align: center;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
