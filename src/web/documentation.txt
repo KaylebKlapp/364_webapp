@@ -15,6 +15,10 @@ https://www.a2hosting.com/kb/developer-corner/postgresql/connect-to-postgresql-u
 To ensure error handling, I used the following website to understand the die command: 
 https://www.w3schools.com/php/php_error.asp
 
+space-a database back up (.sql file): I used the following website to help me understand
+how to create a .sql file to help back up the entire database for testing purposes: 
+https://www.netguru.com/blog/how-to-dump-and-restore-postgresql-database
+
 
 
 
