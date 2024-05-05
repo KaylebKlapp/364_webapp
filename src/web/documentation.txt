@@ -7,7 +7,6 @@ C1C Klapp used code from their previous web development PEX to help develop
 a base for the website, tables, and CSS. Lastly, for the Space-A description,
 we used the official description posted on https://myarmybenefits.us.army.mil/Benefit-Library/Federal-Benefits/Space-Available-Travel-(Space-A-Travel). 
 
-
 config.php: I used the following websites to help me understand how to connect to the 
 PostgreSQL using a php file by using the pg_connect function: 
 https://www.w3resource.com/PostgreSQL/PostgreSQL-with-php-a-through-introduction.php
