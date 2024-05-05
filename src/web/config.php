@@ -1,6 +1,6 @@
 <?php
 
-// Configure credentials of the database
+// Establish credentials for database
 $dbHost = 'localhost';
 $dbPort = '5432';
 $dbName = 'space-a';
