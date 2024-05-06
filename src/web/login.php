@@ -29,14 +29,13 @@
             {
                 $authenticated=$result->verify==1;
             }
+            else{
+                echo "not valid";
+                session_destroy();
+            }
         }
 
-        if(!$authenticated)
-        {
-            echo "not valid";
-            session_destroy();
-        }
-        else
+        if ($authenticated)
         {
             $_SESSION["DoD_ID"] = $user;
             header('location:user_home.html');
