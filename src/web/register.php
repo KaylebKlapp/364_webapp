@@ -22,16 +22,11 @@
         if($connection)
         {
             $query="INSERT INTO people VALUES ($1, $2, crypt($3, gen_salt('md5')));";
-            $res = pg_query_params($connection, $query, array($dodid, $lastname, $pwd));
-
-            $result = pg_fetch_object($res);
-            if($result)
+            $res = pg_query_params($connection, $query, array($dodid, $lname, $pwd));
+            
+            if($res)
             {
-                echo "Done!";
                 header('location:login.php');
-            }
-            else {
-                echo "Not done?";
             }
         }
     }
