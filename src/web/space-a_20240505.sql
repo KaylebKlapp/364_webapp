@@ -68,7 +68,8 @@ ALTER TABLE public.flight OWNER TO student;
 
 CREATE TABLE public.people (
     "DoD_ID" bigint NOT NULL,
-    last_name character varying(255) NOT NULL
+    last_name character varying(255) NOT NULL,
+    user_password character varying(10) DEFAULT 1096 NOT NULL
 );
 
 
@@ -161,17 +162,18 @@ COPY public.flight ("flight_ID", "plane_ID", "from_airport_ID", "to_airport_ID",
 -- Data for Name: people; Type: TABLE DATA; Schema: public; Owner: student
 --
 
-COPY public.people ("DoD_ID", last_name) FROM stdin;
-1234567890	Last0
-2345678901	Last1
-3456789012	Last2
-4567890123	Last3
-5678901234	Last4
-6789012345	Last5
-7890123456	Last6
-8901234567	Last7
-9012345678	Last8
-1113456789	Last9
+COPY public.people ("DoD_ID", last_name, user_password) FROM stdin;
+1234567890	Last0	1096
+2345678901	Last1	1096
+3456789012	Last2	1096
+4567890123	Last3	1096
+5678901234	Last4	1096
+6789012345	Last5	1096
+7890123456	Last6	1096
+8901234567	Last7	1096
+9012345678	Last8	1096
+1113456789	Last9	1096
+1096109600	admin	adminrocks
 \.
 
 

@@ -18,6 +18,8 @@ space-a database back up (.sql file): I used the following website to help me un
 how to create a .sql file to help back up the entire database for testing purposes: 
 https://www.netguru.com/blog/how-to-dump-and-restore-postgresql-database
 
+Timestamp: I used the following to help understand the timestamp data type: 
+https://www.commandprompt.com/education/postgresql-timestamp-timestamp-without-time-zone-data-type/
 
 
 
