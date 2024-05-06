@@ -40,6 +40,10 @@ button{
     border:none;
 }
 
+input {
+    margin-bottom: 5px;
+}
+
 .nobox {
     border: none;
     outline: none;
