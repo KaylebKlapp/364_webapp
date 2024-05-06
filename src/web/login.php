@@ -68,7 +68,7 @@
                 User Login
             </h2>
             
-                <h3>No account? <a href = "register.php" class="nobox"> Register </h3>
+                <h3>No account? <a href = "register.php" class="nobox"> Register </a></h3>
                 <form form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class = "login_form">
                     <label for="user">DoD ID: </label><br>
                     <input type="text" name="user" max="50" placeholder="Enter DoD ID" pattern="[0-9]{10}" required><br>
