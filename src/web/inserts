@@ -1,3 +1,6 @@
+psql student < space-a_20240505.sql
+
+
 DELETE FROM reservation;
 DELETE FROM flight;
 DELETE FROM plane;

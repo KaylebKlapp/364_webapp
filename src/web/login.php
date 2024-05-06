@@ -55,7 +55,7 @@
     <body>
         <h1>Space Available Reservation Application</h1>
 
-        <div class="site_body">
+        <div class="site_body">not valid
             <nav>
                 <ul class = "navtxt">
                     <li><a href = index.html>Home</a></li> 
@@ -70,7 +70,7 @@
             
                 <form form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class = "login_form">
                     <label for="user">DoD ID: </label><br>
-                    <input type="text" name="user" max="50" placeholder="Enter DoD ID"" required><br>
+                    <input type="text" name="user" max="50" placeholder="Enter DoD ID" pattern="[0-9]{10}" required><br>
                     
                     <label for="pwd">Password: </label><br>
                     <input type="password" placeholder="Enter Password" name="pwd" required/><br>
