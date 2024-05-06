@@ -21,13 +21,24 @@
 
         if($connection)
         {
-            $query="select * from verify($1, $2)";
-            $res = pg_query_params($connection, $query, array($user, $pwd));
+            $query="select * from people where dod_id=$1 --AND pwd=crypt($2, gen_salt('md5'));";
+            #$query="select * from verify($1, $2)";
+
+            $res = pg_query_params($connection, $query, array($user));  #, $pwd));
 
             $result = pg_fetch_object($res);
             if($result)
             {
-                $authenticated=$result->verify==1;
+                $authenticated<-1;
+                #$row = pg_fetch_row($res);
+
+                if ($result->admin == true) {
+                    #header('location:admin.html');
+                    echo 'admin';
+                } else {
+                    #header('location:user_home.html');
+                    echo 'not admin';
+                }
             }
             else{
                 echo "not valid";
@@ -38,7 +49,6 @@
         if ($authenticated)
         {
             $_SESSION["DoD_ID"] = $user;
-            header('location:user_home.html');
         }
     }
 ?>
