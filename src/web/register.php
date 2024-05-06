@@ -1,8 +1,8 @@
 <?php
-    $authenticated = false;
-    if(isset($_POST['submit']) && $_POST['submit']=="submit")
+    if(isset($_POST['register']) && $_POST['register']=="Register")
     {
-        $user=$_POST['user'];
+        $lname=$_POST['lastname'];
+        $dodid=$_POST['dodid'];
         $pwd=$_POST['pwd'];
 
         // Establish credentials for database
@@ -21,25 +21,18 @@
 
         if($connection)
         {
-            $query="select * from verify($1, $2)";
-            $res = pg_query_params($connection, $query, array($user, $pwd));
+            $query="INSERT INTO people VALUES ($1, $2, crypt($3, gen_salt('md5')));";
+            $res = pg_query_params($connection, $query, array($dodid, $lastname, $pwd));
 
             $result = pg_fetch_object($res);
             if($result)
             {
-                $authenticated=$result->verify==1;
+                echo "Done!";
+                header('location:login.php');
             }
-        }
-
-        if(!$authenticated)
-        {
-            echo "not valid";
-            session_destroy();
-        }
-        else
-        {
-            $_SESSION["DoD_ID"] = $user;
-            header('location:user_home.html');
+            else {
+                echo "Not done?";
+            }
         }
     }
 ?>
@@ -70,20 +63,20 @@
             
                 <form form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class = "login_form">
                     <label for="user">DoD ID: </label><br>
-                    <input type="text" name="user" max="50" placeholder="Enter DoD ID" pattern="[0-9]{10}" required><br>
+                    <input type="text" name="dodid" max="50" placeholder="Enter DoD ID" pattern="[0-9]{10}" required><br>
 
                     <label for="user">Last Name: </label><br>
-                    <input type="text" name="user" max="50" placeholder="Enter Last Name" pattern="[a-zA-Z-]{10}" required><br>
+                    <input type="text" name="lastname" max="50" placeholder="Enter Last Name" pattern="[a-zA-Z-]{10}" required><br>
                     
                     <label for="pwd">Password: </label><br>
                     <input type="password" placeholder="Enter Password" name="pwd" pattern="{3}" required/><br>
                 
-                    <input type="submit" value="Register" name="submit"/><br>
+                    <input type="submit" value="Register" name="register"/><br>
                 </form>
                 <script>
                     function submitForm(form){
                         if (form.checkValidity()){
-                            window.location = 'user_home.html';
+                            window.location = 'login.php';
                             return false;
                         }
                         return true;
