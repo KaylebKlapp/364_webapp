@@ -32,6 +32,19 @@ button{
     margin-right: 30px;
 }
 
+.h3 {
+    color: Navy;
+    font-size: 100;
+    text-align: center;
+    outline: none;
+    border:none;
+}
+
+.nobox {
+    border: none;
+    outline: none;
+}
+
 a {
     color: navy;
     border:2px solid navy;

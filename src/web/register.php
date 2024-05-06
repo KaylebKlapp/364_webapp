@@ -68,15 +68,17 @@
                 User Login
             </h2>
             
-                <h3>No account? <a href = "register.php" class="nobox"> Register </h3>
                 <form form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class = "login_form">
+                    <label for="user">Last Name: </label><br>
+                    <input type="text" name="user" max="50" placeholder="Enter Last Name" pattern="[a-zA-Z-]{10}" required><br>
+
                     <label for="user">DoD ID: </label><br>
-                    <input type="text" name="user" max="50" placeholder="Enter DoD ID" pattern="[0-9]{10}" required><br>
+                    <input type="text" name="user" max="50" placeholder="Enter DoD ID" pattern="[0-9]{10} required><br>
                     
                     <label for="pwd">Password: </label><br>
-                    <input type="password" placeholder="Enter Password" name="pwd" required/><br>
+                    <input type="password" placeholder="Enter Password" name="pwd" pattern="{3} required/><br>
                 
-                    <input type="submit" value="submit" name="submit"/><br>
+                    <input type="submit" value="Register" name="submit"/><br>
                 </form>
                 <script>
                     function submitForm(form){
