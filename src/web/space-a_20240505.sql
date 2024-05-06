@@ -30,6 +30,39 @@ CREATE EXTENSION IF NOT EXISTS adminpack WITH SCHEMA pg_catalog;
 COMMENT ON EXTENSION adminpack IS 'administrative functions for PostgreSQL';
 
 
+--
+-- Name: pgcrypto; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS pgcrypto WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION pgcrypto; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION pgcrypto IS 'cryptographic functions';
+
+
+--
+-- Name: verify(bigint, text); Type: FUNCTION; Schema: public; Owner: student
+--
+
+CREATE FUNCTION public.verify(dod_id bigint, password text) RETURNS integer
+    LANGUAGE plpgsql
+    AS $$
+	declare
+	verified integer;
+	begin
+		select 1 into verified from people where DoD_ID=DoD_ID and 
+			pwd=crypt(password, pwd);
+		return coalesce(verified,0);
+	end;
+$$;
+
+
+ALTER FUNCTION public.verify(dod_id bigint, password text) OWNER TO student;
+
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
@@ -69,7 +102,7 @@ ALTER TABLE public.flight OWNER TO student;
 CREATE TABLE public.people (
     "DoD_ID" bigint NOT NULL,
     last_name character varying(255) NOT NULL,
-    user_password character varying(10) DEFAULT 1096 NOT NULL
+    pwd character varying(255) DEFAULT 1096 NOT NULL
 );
 
 
@@ -162,18 +195,18 @@ COPY public.flight ("flight_ID", "plane_ID", "from_airport_ID", "to_airport_ID",
 -- Data for Name: people; Type: TABLE DATA; Schema: public; Owner: student
 --
 
-COPY public.people ("DoD_ID", last_name, user_password) FROM stdin;
-1234567890	Last0	1096
-2345678901	Last1	1096
-3456789012	Last2	1096
-4567890123	Last3	1096
-5678901234	Last4	1096
-6789012345	Last5	1096
-7890123456	Last6	1096
-8901234567	Last7	1096
-9012345678	Last8	1096
-1113456789	Last9	1096
-1096109600	admin	adminrocks
+COPY public.people ("DoD_ID", last_name, pwd) FROM stdin;
+1234567890	Last0	$1$5Z1bU7dU$l0Xl.h/p9yzMohDkJ1dDp1
+2345678901	Last1	$1$iC4QKAFl$3i.LsMR2x/5p0xW2vgPy01
+3456789012	Last2	$1$l.cDgbX4$dDFu1T0tUbWw3vROh9GiQ1
+4567890123	Last3	$1$sxBBcjqT$NTxPUY/aw89NQRyU8aUs7.
+5678901234	Last4	$1$5hQhUIyT$3H0NcF7mOLCZxMryKxGGn1
+6789012345	Last5	$1$fLyDZzPA$O5rsiY0RhjPxl9bdY8odp1
+7890123456	Last6	$1$cPMRNhgN$qJZ9YyOMWRfo6fIOhVx4s0
+8901234567	Last7	$1$p9Ygvtgo$V0S.zFCPKFc5ON8yCx1Jc/
+9012345678	Last8	$1$8jB6XHE5$MpnNZYDo8zc.jyv4Kckc.0
+1113456789	Last9	$1$OyVpVycb$JGWGWPpUpLSJ05hzfy3Xl0
+1096109600	admin	$1$akPU169S$eBvr/GfJjOvyhvwLTkgmZ0
 \.
 
 
