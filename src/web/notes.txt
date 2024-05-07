@@ -1,4 +1,4 @@
-psql student < space-a_20240505.sql
+psql space-a < space-a_20240506.sql
 
 
 DELETE FROM reservation;

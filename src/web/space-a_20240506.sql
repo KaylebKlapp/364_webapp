@@ -55,7 +55,7 @@ CREATE FUNCTION public.verify(dodid bigint, user_password text) RETURNS integer
 	verified integer;
 	admin integer;
 	begin
-		select 1 into verified from people where DoD_ID=DoD_ID and 
+		select 1 into verified from people where dodid=DoD_ID and 
 			user_password=crypt(user_password, password);
 		select 2 into admin from people where dodid=DoD_ID and
 			pwd=crypt(password, pwd) and people.admin = TRUE;
