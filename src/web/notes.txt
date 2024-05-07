@@ -125,7 +125,31 @@ $$
 $$
 language plpgsql;
 
+User_reservations: 
 
+SELECT 
+    a1.airport_location AS "Departure Location",
+    a2.airport_location AS "Arrival Location",
+    p.model AS "Aircraft Type",
+    (f.maximum_seats - COUNT(r."DoD_ID")) AS "Remaining Seats",
+    f.departure_date_time AS "Departure Time",
+    f.departure_date_time AS "Arrival Time"
+FROM 
+    reservation r
+JOIN 
+    flight f ON r."flight_ID" = f."flight_ID"
+JOIN 
+    airport a1 ON f."from_airport_ID" = a1."airport_ID"
+JOIN 
+    airport a2 ON f."to_airport_ID" = a2."airport_ID"
+JOIN 
+    plane p ON f."plane_ID" = p."plane_ID"
+LEFT JOIN 
+    reservation r2 ON f."flight_ID" = r2."flight_ID"
+WHERE 
+    r."DoD_ID" = ENTER DOD_ID Number here
+GROUP BY 
+    f."flight_ID", a1."airport_location", a2.airport_location, p.model, f.maximum_seats, f.departure_date_time
 
 
 

@@ -156,17 +156,11 @@ img {
 table {
     border: 3px solid navy;
     text-align: center;
-    display: block;
-    width: 75%;
-    empty-cells: hide;
-    margin-left: auto;
-    margin-right: auto;
-    table-layout: fixed;
-    row-gap: 10px;
-}
-
-th {
-    color: navy;
+    width: 75%;                  
+    margin: 0 auto;              
+    table-layout: fixed;         
+    border-collapse: collapse;
+    word-wrap: break-word;
 }
 
 tr {
@@ -177,9 +171,17 @@ tr {
 th, td {
     border-bottom: 1px solid navy;
     background-color: whitesmoke;
+    overflow: hidden;
+    word-wrap: break-word;
+    color: navy;
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    font-size:25px
   }
 
-th, td, tr {
+tr {
     color: navy;
     padding-left: 15px;
     padding-right: 15px;
