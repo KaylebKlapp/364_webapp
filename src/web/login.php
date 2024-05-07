@@ -36,7 +36,7 @@
                     header('location:admin.html');
                     echo 'admin';
                 } elseif ($authenticated == 1) {
-                    header('location:user_home.html');
+                    header('location:user_home.php');
                     echo 'not admin';
                 } else {
                     echo 'invalid login';
