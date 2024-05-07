@@ -28,8 +28,22 @@
             <h3>Enter Desired Departure Location</h3>
             <div class="formbody">
                 <form method="post" class = "reserve_form" action="flights.php">
-                    Departure Airport:<input type="text" id="departure" name="departure" required>
-                    <br>
+                    <select name="departure" id="departure">
+                            <option value="Eglin AFB, FL, USA">Eglin AFB, FL, USA</option>
+                            <option value="Nellis AFB, NV, USA">Nellis AFB, NV, USA</option>
+                            <option value="Laughlin AFB, TX, USA">Laughlin AFB, TX, USA</option>
+                            <option value="Columbus AFB, MS, USA">Columbus AFB, MS, USA</option>
+                            <option value="Holloman AFB, NM, USA">Holloman AFB, NM, USA</option>
+                            <option value="Whiteman AFB, MO, USA">Whiteman AFB, MO, USA</option>
+                            <option value="Ramstein AB, Rhineland-Palatinate, Germany">Ramstein AB, Rhineland-Palatinate, Germany</option>
+                            <option value="Kadena AB, Okinawa, Japan">Kadena AB, Okinawa, Japan</option>
+                            <option value="Incirlik AB, Adana, Turkey">Incirlik AB, Adana, Turkey</option>
+                            <option value="Osan AB, Pyeongtaek, South Korea">Osan AB, Pyeongtaek, South Korea</option>
+                            <option value="RAF Mildenhall, Suffolk, England">RAF Mildenhall, Suffolk, England</option>
+                            <option value="Andersen AFB, Yigo, Guam">Andersen AFB, Yigo, Guam</option>
+                            <option value="Misawa AB, Aomori, Japan">Misawa AB, Aomori, Japan</option>
+                            <option value="Aviano AB, Friuli Venezia Giulia, Italy">Aviano AB, Friuli Venezia Giulia, Italy</option>
+                        </select>
                     <input type="submit" value="submit" class="button">
                 </form>
             </div>
