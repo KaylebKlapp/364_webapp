@@ -27,7 +27,7 @@
     
             <p1>Welcome to Space-A!
                 <br><br>
-                <button class = "user_button" onclick="window.location.href='user_reserved.html'">My Reserved Flights</button>
+                <button class = "user_button" onclick="window.location.href='user_reserved.php'">My Reserved Flights</button>
                 <br>
                 <button class = "user_button" onclick="window.location.href='flight_query.html'">New Flight</button><br>
             </p1>
