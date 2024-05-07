@@ -35,7 +35,7 @@
                 echo $authenticated;
 
                 if ($authenticated == 2) {
-                    header('location:admin.html');
+                    header('location:admin.php');
                     $_SESSION["admin"] = 1;
                     echo 'admin';
                 } elseif ($authenticated == 1) {
