@@ -23,7 +23,6 @@
         }
         if($connection)
         {
-            #$query="select * from people where dod_id=$1 --AND pwd=crypt($2, gen_salt('md5'));";
             $query="select verify.verify from verify($1, $2)";
 
             $res = pg_query_params($connection, $query, array($user, $pwd));
