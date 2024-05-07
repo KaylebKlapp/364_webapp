@@ -1,4 +1,61 @@
-Documentation Statement: 
+Documentation Statement: To better formulate the documentation statements for the assignment
+we have conslidate each statement down to a part of the file. Overall, authorized resources
+were strictly followed. Here is the documentation statement for each file: 
+
+index.html: Only used an example from our team members' previous Web Development 
+projects. Nav bar information found on w3 schools and from Logan's previous Web Development 
+PEX/project.
+
+login.php: Because I wanted to use pgAdmin4 as my database management system, 
+I had to make authentication php code for PostgreSQL. Therefore I used the technique in this YouTube video to authenticate: 
+https://www.youtube.com/watch?v=Ll_nJ03FT6Q. This consisted of making a function in the 
+space-a database and then using that function in the php code. We further developed this code
+ourselvs to incorperate an admin check/authentication as well.
+
+user_home.php: 
+
+user_reserved.php
+
+flight_query.php
+
+flights.php
+
+confirmation.php
+
+admin.php
+
+airport_add.php
+
+airport_delete.php
+
+flight_add.php
+
+flight_delete.php
+
+flight_query.php
+
+logout.php
+
+manage_admins.php
+
+register.php:
+
+
+remove_users.php:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 We used the following w3 schools website to help with the onclick event 
 on a button: https://www.w3schools.com/jsref/event_onclick.asp
