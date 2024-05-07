@@ -18,7 +18,9 @@
         if (!$connection){
             die("Error: Unable to connect to $dbName database. Please try again.");
         }
-
+        if(!$_SESSION["DoD_ID"]){
+            header('location:login.php');
+        }
         if($connection)
         {
             #$query="select * from people where dod_id=$1 --AND pwd=crypt($2, gen_salt('md5'));";
@@ -34,9 +36,11 @@
 
                 if ($authenticated == 2) {
                     header('location:admin.html');
+                    $_SESSION["admin"] = 1;
                     echo 'admin';
                 } elseif ($authenticated == 1) {
                     header('location:user_home.php');
+                    $_SESSION["admin"] = 0;
                     echo 'not admin';
                 } else {
                     echo 'invalid login';
@@ -70,9 +74,8 @@
         <div class="site_body">
             <nav>
                 <ul class = "navtxt">
-                    <li><a href = index.html>Home</a></li> 
+                    <li><a href = logout.php>Home</a></li> 
                     <li><a href = login.php>Login</a></li> 
-                    <li><a href = admin.html>Admin</a></li> 
                 </ul>
             </nav>
     

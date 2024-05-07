@@ -1,3 +1,14 @@
+<?php
+session_start();
+if(!$_SESSION["DoD_ID"]){
+    header('location:login.php');
+}
+if ($_SESSION["admin"] == 0){
+    header('location:user_home.php');
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,9 +22,7 @@
         <div class="site_body">
             <nav>
                 <ul class = "navtxt">
-                    <li><a href = index.html>Home</a></li> 
-                    <li><a href = login.php>Login</a></li> 
-                    <li><a href = admin.html>Admin</a></li> 
+                    <li><a href = logout.php>Logout</a></li> 
                 </ul>
             </nav>
             <h3>Enter Flight Information:</h3>

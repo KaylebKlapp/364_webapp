@@ -1,3 +1,10 @@
+<?php
+    // Establish credentials for database
+    session_start();
+    if(!$_SESSION["DoD_ID"]){
+        header('location:login.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
