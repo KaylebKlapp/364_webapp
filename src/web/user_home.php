@@ -16,7 +16,7 @@
             <nav>
                 <ul class = "navtxt">
                     <li><a href = user_home.php>User Home</a></li> 
-                    <li><a href = index.html>Log Out</a></li> 
+                    <li><a href = logout.php>Log Out</a></li> 
                 </ul>
             </nav>
     

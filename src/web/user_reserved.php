@@ -14,7 +14,6 @@
     }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -27,7 +26,7 @@
         <nav>
             <ul class = "navtxt">
                 <li><a href = user_home.php>User Home</a></li> 
-                <li><a href = index.html>Log Out</a></li> 
+                <li><a href = logout.php>Log Out</a></li> 
             </ul>
         </nav>
         
@@ -49,8 +48,8 @@
                     a2.airport_location AS \"Arrival Location\",
                     p.model AS \"Aircraft Type\",
                     (f.maximum_seats - COUNT(r.\"DoD_ID\")) AS \"Remaining Seats\",
-                    f.departure_date_time AS \"Departure Time\",
-                    f.arrival_date_time AS \"Arrival Time\"
+                    f.departure_date AS \"Departure Time\",
+                    f.arrival_date AS \"Arrival Time\"
                     FROM 
                         reservation r
                     JOIN 
@@ -66,7 +65,7 @@
                     WHERE 
                         r.\"DoD_ID\" = " . $_SESSION['DoD_ID'] . "
                     GROUP BY 
-                        f.\"flight_ID\", a1.\"airport_location\", a2.\"airport_location\", p.\"model\", f.\"maximum_seats\", f.\"departure_date_time\"";
+                        f.\"flight_ID\", a1.\"airport_location\", a2.\"airport_location\", p.\"model\", f.\"maximum_seats\", f.\"departure_date\"";
             
                     $res = pg_query($connection, $query);
                     if ($res) {

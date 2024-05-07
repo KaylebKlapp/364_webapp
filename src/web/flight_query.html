@@ -15,11 +15,17 @@
                     <li><a href = logout.php>Log Out</a></li> 
                 </ul>
             </nav>
-            <p>
-                Congratulations! You have reserved your flight!
-            </p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Air_Mobility_Command.svg/220px-Air_Mobility_Command.svg.png" alt="Cadet Service Learning Logo"><br>
+
+            <h2>Find Flights</h2>
+            <h3>Enter Desired Departure Location</h3>
+            <div class="formbody">
+                <form method="post" class = "reserve_form" action="flights.php">
+                    Departure Airport:<input type="text" id="departure" name="departure" required>
+                    <br>
+                    <input type="submit" value="submit" class="button">
+                </form>
+            </div>
+            <br>
         </div>
     </body>
-
 </html>
