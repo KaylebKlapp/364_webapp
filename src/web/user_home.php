@@ -32,7 +32,7 @@
                 <br><br>
                 <button class = "user_button" onclick="window.location.href='user_reserved.php'">My Reserved Flights</button>
                 <br>
-                <button class = "user_button" onclick="window.location.href='flight_query.html'">New Flight</button><br>
+                <button class = "user_button" onclick="window.location.href='flight_query.php'">New Flight</button><br>
             </p1>
             </body>
         </div>
