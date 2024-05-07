@@ -1,4 +1,7 @@
+DUMP YOUR SQL: 
 psql space-a < space-a_20240506.sql
+
+RESTORE YOUR SQL: 
 
 
 DELETE FROM reservation;
