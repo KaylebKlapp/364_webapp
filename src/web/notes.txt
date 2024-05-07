@@ -1,8 +1,8 @@
 DUMP YOUR SQL: 
-psql space-a < space-a_20240506.sql
+pg_dump space-a > space-a_20240506.sql
 
 RESTORE YOUR SQL: 
-psql space-a < space-a_20240506.sql
+psql space-a < space-a_20240506.sq
 
 DELETE FROM reservation;
 DELETE FROM flight;
