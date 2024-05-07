@@ -21,7 +21,7 @@
 
         if($connection)
         {
-            $query="INSERT INTO people VALUES ($1, $2, crypt($3, gen_salt('md5'));";
+            $query="INSERT INTO people VALUES ($1, $2, crypt($3, gen_salt('md5')));";
             $res = pg_query_params($connection, $query, array($dodid, $lname, $pwd));
             
             if($res)
