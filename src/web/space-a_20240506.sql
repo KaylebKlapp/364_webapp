@@ -48,24 +48,23 @@ COMMENT ON EXTENSION pgcrypto IS 'cryptographic functions';
 -- Name: verify(bigint, text); Type: FUNCTION; Schema: public; Owner: student
 --
 
-CREATE FUNCTION public.verify(dodid bigint, user_password text) RETURNS integer
+CREATE FUNCTION public.verify(dodid bigint, password text) RETURNS integer
     LANGUAGE plpgsql
     AS $$
 	declare
 	verified integer;
 	admin integer;
 	begin
-		select 1 into verified from people where DoD_ID=DoD_ID and 
-			user_password=crypt(user_password, password);
-		select 2 into admin from people where dodid=DoD_ID and
-			pwd=crypt(password, pwd) and people.admin = TRUE;
-	
+		select 1 into verified from people where dodid=DoD_ID and 
+			pwd=crypt(password, pwd) and people.admin=FALSE;
+		select 2 into admin from people where dodid=DoD_ID and 
+			pwd=crypt(password,pwd) and people.admin=TRUE;
 		return coalesce(admin, verified, 0);
 	end;
 $$;
 
 
-ALTER FUNCTION public.verify(dodid bigint, user_password text) OWNER TO student;
+ALTER FUNCTION public.verify(dodid bigint, password text) OWNER TO student;
 
 SET default_tablespace = '';
 
@@ -105,7 +104,7 @@ ALTER TABLE public.flight OWNER TO student;
 --
 
 CREATE TABLE public.people (
-    "DoD_ID" bigint NOT NULL,
+    dod_id bigint NOT NULL,
     last_name character varying(255) NOT NULL,
     pwd character varying(255) DEFAULT 1096 NOT NULL,
     admin boolean DEFAULT false NOT NULL
@@ -201,7 +200,7 @@ COPY public.flight ("flight_ID", "plane_ID", "from_airport_ID", "to_airport_ID",
 -- Data for Name: people; Type: TABLE DATA; Schema: public; Owner: student
 --
 
-COPY public.people ("DoD_ID", last_name, pwd, admin) FROM stdin;
+COPY public.people (dod_id, last_name, pwd, admin) FROM stdin;
 1010101001	obrien	$1$TEhgLbU2$E5pKEwy2OVq9Yj.J6kjkB/	f
 1010101011	obrien	$1$JLKcpYS6$xCouFBwyLU0q8PtNHFE0U/	f
 1096109600	admin	$1$akPU169S$eBvr/GfJjOvyhvwLTkgmZ0	t
@@ -215,6 +214,7 @@ COPY public.people ("DoD_ID", last_name, pwd, admin) FROM stdin;
 8901234567	Last7	$1$p9Ygvtgo$V0S.zFCPKFc5ON8yCx1Jc/	f
 9012345678	Last8	$1$8jB6XHE5$MpnNZYDo8zc.jyv4Kckc.0	f
 1113456789	Last9	$1$OyVpVycb$JGWGWPpUpLSJ05hzfy3Xl0	f
+1	logan	$1$let34BSK$MD01JgNJG7DOq9Kx8E/5P.	f
 \.
 
 
@@ -296,7 +296,7 @@ ALTER TABLE ONLY public.reservation
 --
 
 ALTER TABLE ONLY public.people
-    ADD CONSTRAINT "DoD_ID" PRIMARY KEY ("DoD_ID");
+    ADD CONSTRAINT "DoD_ID" PRIMARY KEY (dod_id);
 
 
 --
@@ -336,7 +336,7 @@ ALTER TABLE ONLY public.unit
 --
 
 ALTER TABLE ONLY public.reservation
-    ADD CONSTRAINT "DoD_ID" FOREIGN KEY ("DoD_ID") REFERENCES public.people("DoD_ID") ON UPDATE CASCADE ON DELETE RESTRICT;
+    ADD CONSTRAINT "DoD_ID" FOREIGN KEY ("DoD_ID") REFERENCES public.people(dod_id) ON UPDATE CASCADE ON DELETE RESTRICT;
 
 
 --
@@ -344,7 +344,7 @@ ALTER TABLE ONLY public.reservation
 --
 
 ALTER TABLE ONLY public.unit
-    ADD CONSTRAINT "POC_DoD_ID" FOREIGN KEY ("POC_DoD_ID") REFERENCES public.people("DoD_ID") ON UPDATE CASCADE ON DELETE RESTRICT;
+    ADD CONSTRAINT "POC_DoD_ID" FOREIGN KEY ("POC_DoD_ID") REFERENCES public.people(dod_id) ON UPDATE CASCADE ON DELETE RESTRICT;
 
 
 --

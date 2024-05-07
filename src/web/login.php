@@ -93,7 +93,7 @@
                 <script>
                     function submitForm(form){
                         if (form.checkValidity()){
-                            window.location = 'user_home.html';
+                            window.location = 'user_home.php';
                             return false;
                         }
                         return true;

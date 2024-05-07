@@ -26,7 +26,7 @@
         <h1>Space Available Reservation Application</h1>
         <nav>
             <ul class = "navtxt">
-                <li><a href = user_home.html>User Home</a></li> 
+                <li><a href = user_home.php>User Home</a></li> 
                 <li><a href = index.html>Log Out</a></li> 
             </ul>
         </nav>
@@ -50,7 +50,7 @@
                     p.model AS \"Aircraft Type\",
                     (f.maximum_seats - COUNT(r.\"DoD_ID\")) AS \"Remaining Seats\",
                     f.departure_date_time AS \"Departure Time\",
-                    f.departure_date_time AS \"Arrival Time\"
+                    f.arrival_date_time AS \"Arrival Time\"
                     FROM 
                         reservation r
                     JOIN 

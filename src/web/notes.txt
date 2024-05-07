@@ -2,7 +2,7 @@ DUMP YOUR SQL:
 pg_dump space-a > space-a_20240506.sql
 
 RESTORE YOUR SQL: 
-psql space-a < space-a_20240506.sq
+psql space-a < space-a_20240506.sql
 
 DELETE FROM reservation;
 DELETE FROM flight;

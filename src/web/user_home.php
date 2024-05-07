@@ -15,7 +15,7 @@
         <div class="site_body">
             <nav>
                 <ul class = "navtxt">
-                    <li><a href = user_home.html>User Home</a></li> 
+                    <li><a href = user_home.php>User Home</a></li> 
                     <li><a href = index.html>Log Out</a></li> 
                 </ul>
             </nav>
@@ -27,7 +27,7 @@
     
             <p1>Welcome to Space-A!
                 <br><br>
-                <button class = "user_button" onclick="window.location.href='user_reserved.html'">My Reserved Flights</button>
+                <button class = "user_button" onclick="window.location.href='user_reserved.php'">My Reserved Flights</button>
                 <br>
                 <button class = "user_button" onclick="window.location.href='flight_query.html'">New Flight</button><br>
             </p1>
