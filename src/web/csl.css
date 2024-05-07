@@ -20,7 +20,7 @@ button{
 .user_button{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     width:auto;
-    height:auto;
+    height:50px;
     background-color: navy;
     color: navy;
     border-color:navy;
@@ -30,6 +30,16 @@ button{
     font-size:25px;
     margin-left: 30px;
     margin-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+
+.user_button:hover {
+    border-width: 4px;
+    background-color: whitesmoke;
+    color: whitesmoke;
+    border-color:navy;
+    color: navy;
 }
 
 .h3 {
@@ -184,7 +194,8 @@ th, td {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
-    font-size:25px
+    font-size:25px;
+    align-items: center;
   }
 
 tr {
@@ -212,6 +223,20 @@ tr {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 15px;
+}
+
+.miniform {
+    padding: 0px;
+    margin: 0px;
+    width:fit-content;
+    background-color: navy;
+    color: navy;
+    border-color:navy;
+    color: whitesmoke;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 23px;
+    
 }
 
 .form_text {

@@ -49,6 +49,7 @@ $departure_location = $_POST['departure'];
             <th>Departure Time</th>
             <th>Arrival Date</th>
             <th>Arrival Time</th>
+            <th></th>
         </tr>
         <?php
             $query = "SELECT 
@@ -58,7 +59,8 @@ $departure_location = $_POST['departure'];
                 f.departure_date AS \"Departure Date\",
                 f.departure_time AS \"Departure Time\",
                 f.arrival_date AS \"Arrival Date\",
-                f.arrival_time AS \"Arrival Time\"
+                f.arrival_time AS \"Arrival Time\",
+                f.\"flight_ID\" as \"flight_id\"
                 FROM 
                     flight f
                 JOIN 
@@ -85,6 +87,7 @@ $departure_location = $_POST['departure'];
                     echo "<td>" . htmlspecialchars($row['Departure Time']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['Arrival Date']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['Arrival Time']) . "</td>";
+                    echo "<td>" . "<form class=\"miniform\" action=\"confirmation.php\" type=\"POST\" method=\"POST\"><input type=\"hidden\" name=\"reservation\"  value=" . $row['flight_id'] ."><input class=\"miniform\" type=\"submit\" name=\"reservse\" value=\"Reserve\"></form>" . "</td>";
                     echo "</tr>";
                 }
             } else {
