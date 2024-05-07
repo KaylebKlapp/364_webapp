@@ -4,7 +4,6 @@ psql space-a < space-a_20240506.sql
 RESTORE YOUR SQL: 
 psql space-a < space-a_20240506.sql
 
-
 DELETE FROM reservation;
 DELETE FROM flight;
 DELETE FROM plane;
@@ -26,8 +25,6 @@ VALUES
 (1113456789, 'Last9', crypt('last0pass', gen_salt('md5'))),
 (1096109600, 'admin', crypt('adminrocks', gen_salt('md5')));
 
-
-
 INSERT INTO airport ("airport_ID", airport_location)
 VALUES
 (0, 'Eglin AFB, FL, USA'),
@@ -44,7 +41,6 @@ VALUES
 (11, 'Andersen AFB, Yigo, Guam'),
 (12, 'Misawa AB, Aomori, Japan'),
 (13, 'Aviano AB, Friuli Venezia Giulia, Italy');
-User Login
 
 INSERT INTO unit ("unit_ID", "airport_ID", "POC_DoD_ID", unit_name)
 VALUES
@@ -62,7 +58,6 @@ VALUES
 (11, 5, 4567890123, 'Bomber Squadron 2'),
 (12, 6, 4567890123, 'Reconnaissance Squadron 1'),
 (13, 6, 4567890123, 'Reconnaissance Squadron 2');
-
 
 INSERT INTO plane ("plane_ID", "unit_ID", model, active) VALUES
 (0, 0, 'KC130', True),
