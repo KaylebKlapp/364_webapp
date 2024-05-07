@@ -50,7 +50,7 @@
                     p.model AS \"Aircraft Type\",
                     (f.maximum_seats - COUNT(r.\"DoD_ID\")) AS \"Remaining Seats\",
                     f.departure_date_time AS \"Departure Time\",
-                    f.departure_date_time AS \"Arrival Time\"
+                    f.arrival_date_time AS \"Arrival Time\"
                     FROM 
                         reservation r
                     JOIN 
