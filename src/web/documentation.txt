@@ -12,7 +12,10 @@ https://www.youtube.com/watch?v=Ll_nJ03FT6Q. This consisted of making a function
 space-a database and then using that function in the php code. We further developed this code
 ourselvs to incorperate an admin check/authentication as well.
 
-user_home.php: 
+user_home.php: only resources used here is the instructor provided handout for authentication.
+We used the ideas from that document to help understand $_SESSION variables along with 
+how session_start(); works. We used the following w3 schools website to help with the onclick event 
+on a button: https://www.w3schools.com/jsref/event_onclick.asp. 
 
 user_reserved.php
 
@@ -40,9 +43,9 @@ manage_admins.php
 
 register.php:
 
-
 remove_users.php:
 
+database creation: 
 
 
 
@@ -57,8 +60,8 @@ remove_users.php:
 
 
 
-We used the following w3 schools website to help with the onclick event 
-on a button: https://www.w3schools.com/jsref/event_onclick.asp
+
+
 Additionally, after recieving approval from Dr. Bouvier, C1C O'Brien and 
 C1C Klapp used code from their previous web development PEX to help develop
 a base for the website, tables, and CSS. Lastly, for the Space-A description,
