@@ -19,12 +19,15 @@
 
         if($connection)
         {
-            $query="DELETE FROM flight WHERE flight.flight_ID = ($1);";
-            $res = pg_query_params($connection, $query, array($flight_id));
+            $query1="DELETE FROM reservation WHERE reservation.\"flight_ID\" = ($1);";
+            $query2="DELETE FROM flight WHERE flight.\"flight_ID\" = ($1);";
+
+            $res = pg_query_params($connection, $query1, array($flight_id));
+            $res = pg_query_params($connection, $query2, array($flight_id));
             
             if($res)
             {
-                echo "Flight added.";
+                echo "Flight removed.";
             }
         }
     }

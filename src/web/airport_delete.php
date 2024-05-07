@@ -19,7 +19,7 @@
 
         if($connection)
         {
-            $query="DELETE FROM airport WHERE airport_ID = ($1);";
+            $query="DELETE FROM airport WHERE airport.\"airport_ID\" = ($1);";
             $res = pg_query_params($connection, $query, array($airport_id));
             
             if($res)

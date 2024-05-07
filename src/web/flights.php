@@ -44,6 +44,7 @@ $departure_location = $_POST['departure'];
         <tr>
             <th>Departure Location</th>
             <th>Arrival Location</th>
+            <th>Seats Left</th>
             <th>Aircraft Type</th>
             <th>Departure Date</th>
             <th>Departure Time</th>
@@ -60,13 +61,17 @@ $departure_location = $_POST['departure'];
                 f.departure_time AS \"Departure Time\",
                 f.arrival_date AS \"Arrival Date\",
                 f.arrival_time AS \"Arrival Time\",
-                f.\"flight_ID\" as \"flight_id\"
+                f.\"flight_ID\" as \"flight_id\",
+                (f.maximum_seats - COUNT(r.\"DoD_ID\")) AS \"Remaining Seats\"
+
                 FROM 
                     flight f
                 JOIN 
                     airport a1 ON f.\"from_airport_ID\" = a1.\"airport_ID\"
                 JOIN 
                     airport a2 ON f.\"to_airport_ID\" = a2.\"airport_ID\"
+                LEFT JOIN 
+                    reservation r ON f.\"flight_ID\" = r.\"flight_ID\"
                 JOIN 
                     plane p ON f.\"plane_ID\" = p.\"plane_ID\"
                 WHERE 
@@ -82,12 +87,13 @@ $departure_location = $_POST['departure'];
                     echo "<tr>";
                     echo "<td>" . htmlspecialchars($row['Departure Location']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['Arrival Location']) . "</td>";
+                    echo "<td>" . htmlspecialchars($row['Remaining Seats']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['Aircraft Type']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['Departure Date']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['Departure Time']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['Arrival Date']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['Arrival Time']) . "</td>";
-                    echo "<td>" . "<form class=\"miniform\" action=\"confirmation.php\" type=\"POST\" method=\"POST\"><input type=\"hidden\" name=\"reservation\"  value=" . $row['flight_id'] ."><input class=\"miniform\" type=\"submit\" name=\"reservse\" value=\"Reserve\"></form>" . "</td>";
+                    echo "<td>" . "<form class=\"miniform\" action=\"confirmation.php\" method=\"post\"><input type=\"hidden\" name=\"flight_id\" id=\"flight_id\" value=".$row['flight_id']."><input class=\"miniform\" type=\"submit\" value=\"Reserve\"></form>" . "</td>";
                     echo "</tr>";
                 }
             } else {
