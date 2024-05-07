@@ -21,25 +21,28 @@
 
         if($connection)
         {
-            $query="select * from people where dod_id=$1 --AND pwd=crypt($2, gen_salt('md5'));";
-            #$query="select * from verify($1, $2)";
+            #$query="select * from people where dod_id=$1 --AND pwd=crypt($2, gen_salt('md5'));";
+            $query="select verify.verify from verify($1, $2)";
 
-            $res = pg_query_params($connection, $query, array($user));  #, $pwd));
+            $res = pg_query_params($connection, $query, array($user, $pwd));
 
             $result = pg_fetch_object($res);
             if($result)
             {
-                $authenticated<-1;
-                #$row = pg_fetch_row($res);
+                $authenticated=$result->verify;
+                echo $authenticated;
 
-                if ($result->admin == true) {
-                    #header('location:admin.html');
+                if ($authenticated == 2) {
+                    header('location:admin.html');
                     echo 'admin';
-                } else {
-                    #header('location:user_home.html');
+                } elseif ($authenticated == 1) {
+                    header('location:user_home.html');
                     echo 'not admin';
+                } else {
+                    echo 'invalid login';
                 }
             }
+
             else{
                 echo "not valid";
                 session_destroy();

@@ -21,7 +21,7 @@
 
         if($connection)
         {
-            $query="INSERT INTO people VALUES ($1, $2, crypt($3, gen_salt('md5')));";
+            $query="INSERT INTO people VALUES ($1, $2, crypt($3, gen_salt('md5'));";
             $res = pg_query_params($connection, $query, array($dodid, $lname, $pwd));
             
             if($res)
@@ -53,7 +53,7 @@
             </nav>
     
             <h2>
-                User Login
+                Register for an Account
             </h2>
             
                 <form form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class = "login_form">
