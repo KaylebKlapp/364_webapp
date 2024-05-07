@@ -55,7 +55,7 @@ CREATE FUNCTION public.verify(dodid bigint, user_password text) RETURNS integer
 	verified integer;
 	admin integer;
 	begin
-		select 1 into verified from people where dodid=DoD_ID and 
+		select 1 into verified from people where DoD_ID=DoD_ID and 
 			user_password=crypt(user_password, password);
 		select 2 into admin from people where dodid=DoD_ID and
 			pwd=crypt(password, pwd) and people.admin = TRUE;
@@ -93,7 +93,8 @@ CREATE TABLE public.flight (
     "from_airport_ID" integer NOT NULL,
     "to_airport_ID" integer NOT NULL,
     maximum_seats integer NOT NULL,
-    departure_date_time time with time zone NOT NULL
+    departure_date_time time with time zone NOT NULL,
+    arrival_date_time time with time zone NOT NULL
 );
 
 
@@ -180,19 +181,19 @@ COPY public.airport ("airport_ID", airport_location) FROM stdin;
 -- Data for Name: flight; Type: TABLE DATA; Schema: public; Owner: student
 --
 
-COPY public.flight ("flight_ID", "plane_ID", "from_airport_ID", "to_airport_ID", maximum_seats, departure_date_time) FROM stdin;
-0	0	0	1	10	09:30:00-07
-1	0	0	4	10	12:30:00-07
-2	0	0	3	10	15:30:00-07
-3	0	0	3	10	18:30:00-07
-4	1	1	2	10	19:45:00-07
-5	1	2	3	10	07:00:00-07
-6	1	3	4	10	14:00:00-07
-7	2	4	5	10	10:15:00-07
-8	2	5	6	10	08:30:00-07
-9	3	6	7	10	16:45:00-07
-10	3	7	8	10	11:00:00-07
-11	4	8	9	10	13:30:00-07
+COPY public.flight ("flight_ID", "plane_ID", "from_airport_ID", "to_airport_ID", maximum_seats, departure_date_time, arrival_date_time) FROM stdin;
+0	0	0	1	10	09:30:00-07	10:30:00-07
+1	0	0	4	10	12:30:00-07	15:30:00-07
+3	0	0	3	10	18:30:00-07	20:30:00-07
+2	0	0	3	10	15:30:00-07	16:30:00-07
+4	1	1	2	10	19:45:00-07	00:45:00-07
+5	1	2	3	10	07:00:00-07	14:00:00-07
+6	1	3	4	10	14:00:00-07	18:00:00-07
+7	2	4	5	10	10:15:00-07	19:15:00-07
+8	2	5	6	10	08:30:00-07	09:30:00-07
+9	3	6	7	10	16:45:00-07	19:45:00-07
+10	3	7	8	10	11:00:00-07	19:00:00-07
+11	4	8	9	10	13:30:00-07	16:30:00-07
 \.
 
 
