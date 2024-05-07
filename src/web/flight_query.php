@@ -28,6 +28,7 @@
             <h3>Enter Desired Departure Location</h3>
             <div class="formbody">
                 <form method="post" class = "reserve_form" action="flights.php">
+                    <h4 class="form_text"> Select an Airport: </h4>
                     <select name="departure" id="departure">
                             <option value="Eglin AFB, FL, USA">Eglin AFB, FL, USA</option>
                             <option value="Nellis AFB, NV, USA">Nellis AFB, NV, USA</option>

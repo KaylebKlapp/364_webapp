@@ -214,6 +214,18 @@ tr {
     padding: 15px;
 }
 
+.form_text {
+    font-size: 21px;
+    margin: 0%;
+    padding: 0%;
+    padding-bottom: 2px;
+}
+
+select {
+    font-size: 21px;
+    color: navy;
+}
+
 .reserve_form {
     color:navy;
     background-color: whitesmoke;
@@ -223,7 +235,7 @@ tr {
     margin-left: auto;
     margin-right: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     padding: 15px;
 }
 
