@@ -39,7 +39,7 @@ $departure_location = $_POST['departure'];
         </ul>
     </nav>
 
-    <h2>Flights Reserved</h2>
+    <h2>Flights Available</h2>
     <table>
         <tr>
             <th>Departure Location</th>
