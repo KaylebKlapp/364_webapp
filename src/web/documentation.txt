@@ -27,6 +27,9 @@ PostgreSQL. Therefore I used the technique in this YouTube video to authenticate
 https://www.youtube.com/watch?v=Ll_nJ03FT6Q. This consisted of making a function in the 
 space-a database and then using that function in the php code.
 
+https://stackoverflow.com/questions/12462899/php-button-on-each-row-of-table
+
 
 
 Other than that, no other resources were used to complete this assignment. 
+Unless we missed something, which is totally possible, but we didnt use chatGPT.
