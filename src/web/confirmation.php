@@ -4,6 +4,9 @@
     if(!$_SESSION["DoD_ID"]){
         header('location:login.php');
     }
+
+    $flight_id = $_POST['flight_id'];
+    $
 ?>
 <!DOCTYPE html>
 <html lang="en">
