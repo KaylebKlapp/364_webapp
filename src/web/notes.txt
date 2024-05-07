@@ -4,6 +4,12 @@ pg_dump space-a > space-a_20240506.sql
 RESTORE YOUR SQL: 
 psql space-a < space-a_20240506.sql
 
+TO FIND HOW MANY SEATS REMAINING IN A FLIGHT:
+SELECT maximum_seats - 
+(SELECT COUNT(*) FROM reservation WHERE flight.flight_id = reservation.flight_ID)
+FROM flight
+WHERE flight.flight_id = XXXX;
+
 DELETE FROM reservation;
 DELETE FROM flight;
 DELETE FROM plane;

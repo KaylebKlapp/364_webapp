@@ -1,4 +1,7 @@
 <?php
+?>
+
+<?php
     if(isset($_POST['add']) && $_POST['add']=="Add")
     {
         $airport_id=$_POST['airport_id'];
@@ -6,6 +9,14 @@
 
         // Establish credentials for database
         session_start();
+        
+        if(!$_SESSION["DoD_ID"]){
+            header('location:login.php');
+        }
+        if ($_SESSION["admin"] == 0){
+            header('location:user_home.php');
+        }
+
         $dbHost = 'localhost';
         $dbPort = '5432';
         $dbName = 'space-a';
