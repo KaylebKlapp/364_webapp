@@ -2,7 +2,7 @@ Documentation Statement: To better formulate the documentation statements for th
 we have conslidate each statement down to a part of the file. Overall, the authorized resources
 were strictly followed. Here is the documentation statement for each file: 
 
-index.html: Only used an example from our team members' previous Web Development 
+index.html & css: Only used an example from our team members' previous Web Development 
 projects. Nav bar information found on w3 schools and from Logan's previous Web Development 
 PEX/project. For the Space-A description, we used the official description posted 
 on https://myarmybenefits.us.army.mil/Benefit-Library/Federal-Benefits/Space-Available-Travel-(Space-A-Travel). 
