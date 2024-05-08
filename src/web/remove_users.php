@@ -1,4 +1,13 @@
 <?php
+    session_start();
+    
+    if(!$_SESSION["DoD_ID"]){
+        header('location:login.php');
+    }
+    if ($_SESSION["admin"] == 0){
+        header('location:user_home.php');
+    }
+    
     if(isset($_POST['update']) && $_POST['update']=="Update")
     {
         $dodid=$_POST['dodid'];
