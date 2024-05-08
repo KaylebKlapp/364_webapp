@@ -40,7 +40,6 @@
 <html lang="en">
     <head>
         <title>Admin: Add a New Flight</title>
-        <meta name="description" content="Space A reservation webapp.">
         <link rel="stylesheet", href="csl.css">
     </head>
     <body>

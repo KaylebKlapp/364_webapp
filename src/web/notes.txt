@@ -46,20 +46,7 @@ VALUES
 (6, 'Kadena AB, Okinawa, Japan'),
 (7, 'Ramstein AB, Rhineland-Palatinate, Germany'),
 (8, 'Incirlik AB, Adana, Turkey'),
-(9, 'Osan AB, Pyeongtaek, South Korea'),
-(10, 'RAF Mildenhall, Suffolk, England'),
-(11, 'Andersen AFB, Yigo, Guam'),
-(12, 'Misawa AB, Aomori, Japan'),
-(13, 'Aviano AB, Friuli Venezia Giulia, Italy');
-
-INSERT INTO unit ("unit_ID", "airport_ID", "POC_DoD_ID", unit_name)
-VALUES
-(0, 0, 1234567890, 'Aerial Refuel Sq 1'),
-(1, 0, 1234567890, 'Aerial Refuel Sq 2'),
-(2, 1, 1234567890, 'Cargo Squadron'),
-(3, 1, 2345678901, 'Cargo Squadron 2'),
-(4, 2, 2345678901, 'Fighter Squadron 1'),
-(5, 2, 2345678901, 'Fighter Squadron 2'),
+(9, 'Osan AB, Pyeongtaek, SoutNellisuadron 2'),
 (6, 3, 3456789012, 'Transport Squadron 1'),
 (7, 3, 3456789012, 'Transport Squadron 2'),
 (8, 4, 3456789012, 'Attack Squadron 1'),

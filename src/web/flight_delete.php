@@ -38,7 +38,6 @@
 <html lang="en">
     <head>
         <title>Admin: Remove a Flight</title>
-        <meta name="description" content="Space A reservation webapp.">
         <link rel="stylesheet", href="csl.css">
     </head>
     <body>
