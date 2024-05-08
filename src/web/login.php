@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $authenticated = false;
     if(isset($_POST['submit']) && $_POST['submit']=="submit")
     {
@@ -6,7 +7,6 @@
         $pwd=$_POST['pwd'];
 
         // Establish credentials for database
-        session_start();
         $dbHost = 'localhost';
         $dbPort = '5432';
         $dbName = 'space-a';
@@ -42,13 +42,8 @@
                     $_SESSION["admin"] = 0;
                     echo 'not admin';
                 } else {
-                    echo 'invalid login';
+                    $_SESSION["authenticated"] = 0;
                 }
-            }
-
-            else{
-                echo "not valid";
-                session_destroy();
             }
         }
 
@@ -89,6 +84,7 @@
                     <input type="password" placeholder="Enter Password" name="pwd" required/><br>
                 
                     <input type="submit" value="submit" name="submit"/><br>
+                    <?php if(isset($_SESSION["authenticated"])){if($_SESSION["authenticated"]==0){echo "<h5>Invalid Login</h5>";}}else{echo "";}?>
                 </form>
                 <script>
                     function submitForm(form){
