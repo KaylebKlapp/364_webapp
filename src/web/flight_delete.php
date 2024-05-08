@@ -47,7 +47,7 @@
             <nav>
                 <ul class = "navtxt">
                     <li><a href = index.html>Home</a></li> 
-                    <li><a href = admin.html>Admin Home</a></li> 
+                    <li><a href = admin.php>Admin Home</a></li> 
                 </ul>
             </nav>
     

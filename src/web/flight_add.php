@@ -7,6 +7,7 @@
         $arrival_id=$_POST['arriving_airport_id'];
         $max_seats=$_POST['max_seats'];
         $departure_time=$_POST['departure_time'];
+        $arrival_time=$_POST['arrival'];
 
         // Establish credentials for database
         session_start();
@@ -24,8 +25,8 @@
 
         if($connection)
         {
-            $query="INSERT INTO flight VALUES ($1, $2, $3, $4, $5, $6);";
-            $res = pg_query_params($connection, $query, array($flight_id, $plane_id, $departure_id, $arrival_id, $max_seats, date('Y-m-d h:i:s', strtotime($departure_time))));
+            $query="INSERT INTO flight VALUES ($1, $2, $3, $4, $5, $6, $7);";
+            $res = pg_query_params($connection, $query, array($flight_id, $plane_id, $departure_id, $arrival_id, $max_seats, date('Y-m-d h:i:s', strtotime($departure_time)), date('Y-m-d h:i:s', strtotime($arrival_time))));
             
             if($res)
             {
@@ -49,7 +50,7 @@
             <nav>
                 <ul class = "navtxt">
                     <li><a href = index.html>Home</a></li> 
-                    <li><a href = admin.html>Admin Home</a></li> 
+                    <li><a href = admin.php>Admin Home</a></li> 
                 </ul>
             </nav>
     
@@ -73,8 +74,11 @@
                     <label for="user">Available Seats: </label><br>
                     <input type="text" name="max_seats" max="50" placeholder="Enter Availabel Seats" required><br>
 
-                    <label for="user">Daperting Date and Time: </label><br>
+                    <label for="user">Departing Date and Time: </label><br>
                     <input type="datetime-local" name="departure_time" max="50" placeholder="Enter Departure Time" required><br>
+
+                    <label for="user">Arrival Date and Time: </label><br>
+                    <input type="datetime-local" name="arrival" max="50" placeholder="Enter Arrival Time" required><br>
                 
                     <input type="submit" value="Add" name="add"/><br>
                 </form>
