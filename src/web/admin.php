@@ -23,38 +23,18 @@ if ($_SESSION["admin"] == 0){
             <nav>
                 <ul class = "navtxt">
                     <li><a href = logout.php>Logout</a></li> 
+                    <li><a href = admin.php>Admin Home</a></li>
                 </ul>
             </nav>
-            <h3>Enter Flight Information:</h3>
-            <form method="post">
-                <label for = "flightNum">Flight Number: </label>
-                <input type = "text" id ="flightNum" name = "flightNum" required/><br>
-                
-                <label for = "departLocation">Departure Location: </label>
-                <input type = "text" id ="departLocation" name = "departLocation" required/><br>
-                
-                <label for = "unitName">Unit Name: </label>
-                <input type = "text" id = "unitName" name = "unitName" required/><br>
-
-                <label for = "arriveLocation">Arrival Location: </label>
-                <input type = "text" id ="arriveLocation" name = "arriveLocation" required/><br>
-
-                <label for = "aircraftType">Aircraft Type: </label>
-                <input type = "text" id ="aircraftType" name = "aircraftType" required/><br>
-
-                <label for = "totalSeats">Total Seats: </label>
-                <input type = "text" id ="totalSeats" name = "totalSeats" required/><br>
-
-                <label for = "departTime">Departure Time: </label>
-                <input type = "text" id ="departTime" name = "departTime" required/><br>
-
-                <label for = "arriveTime">Arrival Time: </label>
-                <input type = "text" id ="arriveTime" name = "arriveTime" required/><br>
-                
-                <input type = "submit" value = "Update"/>
-                <input type = "submit" value = "Add"/>
-                <input type = "submit" value = "Delete"/>
-            </form>
+            <h3>Admin Home</h3>
+            <div class = "admin_homepage">
+                <a class="admin_button" href="flight_add.php"><button class="admin_form_button">Add a flight</button></a>
+                <a class="admin_button" href="flight_delete.php"><button class="admin_form_button">Remove a flight</button></a><br>
+                <a class="admin_button" href="airport_add.php"><button class="admin_form_button">Add a destination</button></a>
+                <a class="admin_button" href="airport_delete.php"><button class="admin_form_button">Remove a destination</button></a><br>
+                <a class="admin_button" href="manage_admins.php"><button class="admin_form_button">Add an administrator</button></a>
+                <a class="admin_button" href="remove_users.php"><button class="admin_form_button">Remove a user</button></a><br>
+            </div>
         </div>
     </body>
 

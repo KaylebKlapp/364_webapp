@@ -71,6 +71,29 @@ a:visited {
     border-top: 2px solid navy;
 }
 
+.admin_homepage {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    font-size: 20px;
+    margin-left: 30%;
+    margin-right: 10%;
+    width: 70%;
+}
+
+.admin_form_button {
+    width: 50%;
+    padding-bottom: 5px;
+    height:100%
+
+}
+
+.admin_button {
+    border:none;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
 p1 {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 33px;
