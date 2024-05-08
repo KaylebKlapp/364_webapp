@@ -55,8 +55,9 @@
         <div class="site_body">
             <nav>
                 <ul class = "navtxt">
-                    <li><a href = user_home.php>User Home</a></li> 
-                    <li><a href = logout.php>Log Out</a></li> 
+                    <li><a href = index.html>Home</a></li> 
+                    <li><a href = user_home.php>User Menu</a></li> 
+                    <li><a href = admin.php>Admin Menu</a></li> 
                 </ul>
             </nav>
             <p>
