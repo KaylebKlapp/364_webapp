@@ -27,7 +27,7 @@ on a button: https://www.w3schools.com/jsref/event_onclick.asp.
 
 user_reserved.php: for the user_reserved.php file we used the previously mentioned youtube video
 mentioned under the login.php documentation to help with starting the session, connecting to the 
-database, and error handling. Additionally, we used pgAdmin4 to help create and check our 
+database, and error handling. Additionally, we used pgAdmin4 to help test and check our 
 SQL query to help query which flights that the current user has reserved. Additionally, we used
 our pervious SQL PEX/assignment to help understand the more complicated queries, such as having
 multiple instances of a entity being used at one time. We also referenced this website to help
@@ -75,7 +75,6 @@ database creation: Space-a database back up (.sql file): I used the following we
 how to create a .sql file to help back up the entire database for testing purposes: 
 https://www.netguru.com/blog/how-to-dump-and-restore-postgresql-database. Timestamp: I used the following to help understand the timestamp data type: 
 https://www.commandprompt.com/education/postgresql-timestamp-timestamp-without-time-zone-data-type/
-
 
 Other than W3schools and what is stated above, no other resources were
 used to complete this assignment. Unless we missed something, which is totally possible.
