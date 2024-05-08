@@ -1,5 +1,5 @@
 Documentation Statement: To better formulate the documentation statements for the assignment
-we have conslidate each statement down to a part of the file. Overall, authorized resources
+we have conslidate each statement down to a part of the file. Overall, the authorized resources
 were strictly followed. Here is the documentation statement for each file: 
 
 index.html: Only used an example from our team members' previous Web Development 
@@ -33,12 +33,23 @@ our pervious SQL PEX/assignment to help understand the more complicated queries,
 multiple instances of a entity being used at one time. We also referenced this website to help
 with these queries as well: https://www.geeksforgeeks.org/how-to-perform-sql-join-on-multiple-columns-in-same-table/?ref=ml_lbp. 
 
-flight_query.php: We used the following website to help with creating the drop down menu: 
+flight_query.php: For this page we didn't know how to create a drop down
+menu so we used the following website to help with creating the drop down menu: 
 https://www.w3schools.com/tags/tag_select.asp
 
-flights.php: https://stackoverflow.com/questions/12462899/php-button-on-each-row-of-table
+flights.php: To help grab the data from the flight_query website we used the following website 
+to understand how the $_POST variable works: https://www.w3schools.com/php/php_forms.asp. To help 
+put a php button on the side of each row in the table, 
+we used this resource: https://stackoverflow.com/questions/12462899/php-button-on-each-row-of-table
+That resource also helped us understand how to send one particular value from the table and use the hide type.
+For the select statement, we used the same process as in the user_reserved.php. We used the 
+previously made SQL select statement from user_reserved.php as a starting place and then tested 
+in pgAdmin4 until the correct query was produced.
 
-confirmation.php
+confirmation.php: To handle the error of duplicate values inserting into a table we
+ensured that the values could not be inserted and sent the user to an error page instead. However
+to make sure the warning did not appear in the top of the screen we used the following resouce:
+https://www.php.net/manual/en/language.operators.errorcontrol.php
 
 admin.php
 
@@ -66,6 +77,5 @@ https://www.netguru.com/blog/how-to-dump-and-restore-postgresql-database. Timest
 https://www.commandprompt.com/education/postgresql-timestamp-timestamp-without-time-zone-data-type/
 
 
-
-Other than that, no other resources were used to complete this assignment. 
-Unless we missed something, which is totally possible, but we didnt use chatGPT.
+Other than W3schools and what is stated above, no other resources were
+used to complete this assignment. Unless we missed something, which is totally possible.
