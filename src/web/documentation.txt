@@ -4,7 +4,15 @@ were strictly followed. Here is the documentation statement for each file:
 
 index.html: Only used an example from our team members' previous Web Development 
 projects. Nav bar information found on w3 schools and from Logan's previous Web Development 
-PEX/project.
+PEX/project. For the Space-A description, we used the official description posted 
+on https://myarmybenefits.us.army.mil/Benefit-Library/Federal-Benefits/Space-Available-Travel-(Space-A-Travel). 
+
+connecting to servers on each page: I used the following websites to help me understand how to connect to the 
+PostgreSQL using a php file by using the pg_connect function: 
+https://www.w3resource.com/PostgreSQL/PostgreSQL-with-php-a-through-introduction.php
+https://www.a2hosting.com/kb/developer-corner/postgresql/connect-to-postgresql-using-php/
+To ensure error handling, I used the following website to understand the die command: 
+https://www.w3schools.com/php/php_error.asp
 
 login.php: Because I wanted to use pgAdmin4 as my database management system, 
 I had to make authentication php code for PostgreSQL. Therefore I used the technique in this YouTube video to authenticate: 
@@ -27,7 +35,7 @@ with these queries as well: https://www.geeksforgeeks.org/how-to-perform-sql-joi
 
 flight_query.php: 
 
-flights.php
+flights.php: https://stackoverflow.com/questions/12462899/php-button-on-each-row-of-table
 
 confirmation.php
 
@@ -51,49 +59,10 @@ register.php:
 
 remove_users.php:
 
-database creation: 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Additionally, after recieving approval from Dr. Bouvier, C1C O'Brien and 
-C1C Klapp used code from their previous web development PEX to help develop
-a base for the website, tables, and CSS. Lastly, for the Space-A description,
-we used the official description posted on https://myarmybenefits.us.army.mil/Benefit-Library/Federal-Benefits/Space-Available-Travel-(Space-A-Travel). 
-
-config.php: I used the following websites to help me understand how to connect to the 
-PostgreSQL using a php file by using the pg_connect function: 
-https://www.w3resource.com/PostgreSQL/PostgreSQL-with-php-a-through-introduction.php
-https://www.a2hosting.com/kb/developer-corner/postgresql/connect-to-postgresql-using-php/
-To ensure error handling, I used the following website to understand the die command: 
-https://www.w3schools.com/php/php_error.asp
-
-space-a database back up (.sql file): I used the following website to help me understand
+database creation: Space-a database back up (.sql file): I used the following website to help me understand
 how to create a .sql file to help back up the entire database for testing purposes: 
-https://www.netguru.com/blog/how-to-dump-and-restore-postgresql-database
-
-Timestamp: I used the following to help understand the timestamp data type: 
+https://www.netguru.com/blog/how-to-dump-and-restore-postgresql-database. Timestamp: I used the following to help understand the timestamp data type: 
 https://www.commandprompt.com/education/postgresql-timestamp-timestamp-without-time-zone-data-type/
-
-authentication on login.php: Because I wanted to use 
-pgAdmin4 as my database management system, I had to make authentication php code for 
-PostgreSQL. Therefore I used the technique in this YouTube video to authenticate: 
-https://www.youtube.com/watch?v=Ll_nJ03FT6Q. This consisted of making a function in the 
-space-a database and then using that function in the php code.
-
-https://stackoverflow.com/questions/12462899/php-button-on-each-row-of-table
 
 
 
