@@ -17,9 +17,15 @@ We used the ideas from that document to help understand $_SESSION variables alon
 how session_start(); works. We used the following w3 schools website to help with the onclick event 
 on a button: https://www.w3schools.com/jsref/event_onclick.asp. 
 
-user_reserved.php
+user_reserved.php: for the user_reserved.php file we used the previously mentioned youtube video
+mentioned under the login.php documentation to help with starting the session, connecting to the 
+database, and error handling. Additionally, we used pgAdmin4 to help create and check our 
+SQL query to help query which flights that the current user has reserved. Additionally, we used
+our pervious SQL PEX/assignment to help understand the more complicated queries, such as having
+multiple instances of a entity being used at one time. We also referenced this website to help
+with these queries as well: https://www.geeksforgeeks.org/how-to-perform-sql-join-on-multiple-columns-in-same-table/?ref=ml_lbp. 
 
-flight_query.php
+flight_query.php: 
 
 flights.php
 
