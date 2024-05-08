@@ -35,7 +35,6 @@
 <html lang="en">
     <head>
         <title>Admin: Remove an Airport</title>
-        <meta name="description" content="Space A reservation webapp.">
         <link rel="stylesheet", href="csl.css">
     </head>
     <body>

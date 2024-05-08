@@ -33,7 +33,8 @@ our pervious SQL PEX/assignment to help understand the more complicated queries,
 multiple instances of a entity being used at one time. We also referenced this website to help
 with these queries as well: https://www.geeksforgeeks.org/how-to-perform-sql-join-on-multiple-columns-in-same-table/?ref=ml_lbp. 
 
-flight_query.php: 
+flight_query.php: We used the following website to help with creating the drop down menu: 
+https://www.w3schools.com/tags/tag_select.asp
 
 flights.php: https://stackoverflow.com/questions/12462899/php-button-on-each-row-of-table
 

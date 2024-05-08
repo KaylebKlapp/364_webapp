@@ -27,7 +27,6 @@ $departure_location = $_POST['departure'];
 <html lang="en">
 <head>
     <title>Space A Reservation Application</title>
-    <meta name="description" content="Space A reservation webapp.">
     <link rel="stylesheet" href="csl.css">
 </head>
 <body>
