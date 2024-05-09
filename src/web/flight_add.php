@@ -32,8 +32,8 @@ if (isset($_POST['add']) && $_POST['add'] == "Add") {
     }
 
     if ($connection) {
-        $query = "INSERT INTO flight VALUES ($1, $2, $3, $4, $5, $6, $7);";
-        $res = pg_query_params($connection, $query, array($flight_id, $plane_id, $departure_id, $arrival_id, $max_seats, date('Y-m-d h:i:s', strtotime($departure_time)), date('Y-m-d h:i:s', strtotime($arrival_time))));
+        $query = "INSERT INTO flight VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9);";
+        $res = pg_query_params($connection, $query, array($flight_id, $plane_id, $departure_id, $arrival_id, $max_seats, date('Y-m-d h:i:s', strtotime($departure_time)), date('Y-m-d h:i:s', strtotime($arrival_time)), date('Y-m-d', strtotime($departure_time)), date('Y-m-d', strtotime($arrival_time))));
 
         if ($res) {
             echo "Flight added.";
