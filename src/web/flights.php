@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!$_SESSION["DoD_ID"]){
+if (!$_SESSION["DoD_ID"]) {
     header('location:login.php');
 }
 $dbHost = 'localhost';
@@ -25,41 +25,45 @@ $departure_location = $_POST['departure'];
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Space A Reservation Application</title>
     <link rel="stylesheet" href="csl.css">
 </head>
+
 <body>
     <h1>Space Available Reservation Application</h1>
     <div class="site_body">
-    <nav>
-        <ul class="navtxt">
-            <li><a href="user_home.php">User Home</a></li>
-            <li><a href = logout.php>Log Out</a></li>
-            <?php if($_SESSION["admin"]==1){echo "<li><a href = admin.php>Admin Menu</a></li>";}?>
-        </ul>
-    </nav>
+        <nav>
+            <ul class="navtxt">
+                <li><a href="user_home.php">User Home</a></li>
+                <li><a href=logout.php>Log Out</a></li>
+                <?php if ($_SESSION["admin"] == 1) {
+                    echo "<li><a href = admin.php>Admin Menu</a></li>";
+                } ?>
+            </ul>
+        </nav>
 
-    <h2>Flights Available</h2>
-    <table>
-        <tr>
-            <th>Departure Location</th>
-            <th>Arrival Location</th>
-            <th>Seats Left</th>
-            <th>Aircraft Type</th>
-            <th>Departure Date</th>
-            <th>Departure Time</th>
-            <th>Arrival Date</th>
-            <th>Arrival Time</th>
-            <th></th>
-        </tr>
-        <?php
+        <h2>Flights Available</h2>
+        <table>
+            <tr>
+                <th>Departure Location</th>
+                <th>Arrival Location</th>
+                <th>Seats Left</th>
+                <th>Aircraft Type</th>
+                <th>Departure Date</th>
+                <th>Departure Time</th>
+                <th>Arrival Date</th>
+                <th>Arrival Time</th>
+                <th></th>
+            </tr>
+            <?php
             $query = "SELECT 
                 a1.airport_location AS \"Departure Location\",
                 a2.airport_location AS \"Arrival Location\",
                 p.model AS \"Aircraft Type\",
                 f.departure_date AS \"Departure Date\",
-                f.departure_time AS \"Departure Time\",
+                f.departure_time as \"Departure Time\",
                 f.arrival_date AS \"Arrival Date\",
                 f.arrival_time AS \"Arrival Time\",
                 f.\"flight_ID\" as \"flight_id\",
@@ -94,14 +98,15 @@ $departure_location = $_POST['departure'];
                     echo "<td>" . htmlspecialchars($row['Departure Time']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['Arrival Date']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['Arrival Time']) . "</td>";
-                    echo "<td>" . "<form class=\"miniform\" action=\"confirmation.php\" method=\"post\"><input type=\"hidden\" name=\"flight_id\" id=\"flight_id\" value=".$row['flight_id']."><input class=\"miniform\" type=\"submit\" value=\"Reserve\"></form>" . "</td>";
+                    echo "<td>" . "<form class=\"miniform\" action=\"confirmation.php\" method=\"post\"><input type=\"hidden\" name=\"flight_id\" id=\"flight_id\" value=" . $row['flight_id'] . "><input class=\"miniform\" type=\"submit\" value=\"Reserve\"></form>" . "</td>";
                     echo "</tr>";
                 }
             } else {
                 echo "<tr><td colspan='7'>No flights found or error in query execution.</td></tr>";
             }
-        ?>
-    </table>
-        </div>
+            ?>
+        </table>
+    </div>
 </body>
+
 </html>

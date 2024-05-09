@@ -1,11 +1,11 @@
 body {
     background-color: rgb(172, 180, 202);
-    color:navy;
+    color: navy;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h5{
-    color:red;
+h5 {
+    color: red;
     font-size: 27px;
     text-align: center;
     padding-top: 8px;
@@ -14,30 +14,30 @@ h5{
     margin-bottom: 0px;
 }
 
-button{
-    width:auto;
-    height:auto;
+button {
+    width: auto;
+    height: auto;
     background-color: navy;
     color: navy;
-    border-color:navy;
+    border-color: navy;
     color: whitesmoke;
     text-transform: capitalize;
-    font-size:25px;
+    font-size: 25px;
     margin-left: 30px;
     margin-right: 30px;
 }
 
-.user_button{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    width:70%;
-    height:50px;
+.user_button {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 70%;
+    height: 50px;
     background-color: navy;
     color: navy;
-    border-color:navy;
+    border-color: navy;
     color: whitesmoke;
     text-transform: capitalize;
     text-align: center;
-    font-size:25px;
+    font-size: 25px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
@@ -48,7 +48,7 @@ button{
     border-width: 4px;
     background-color: whitesmoke;
     color: whitesmoke;
-    border-color:navy;
+    border-color: navy;
     color: navy;
 }
 
@@ -57,7 +57,7 @@ button{
     font-size: 100;
     text-align: center;
     outline: none;
-    border:none;
+    border: none;
 }
 
 input {
@@ -71,13 +71,13 @@ input {
 
 a {
     color: navy;
-    border:2px solid navy;
+    border: 2px solid navy;
     border-top: 2px solid navy;
 }
 
 a:visited {
     color: navy;
-    border:2px solid navy;
+    border: 2px solid navy;
     border-top: 2px solid navy;
 }
 
@@ -93,54 +93,54 @@ a:visited {
 
 .admin_form_button:hover {
     background-color: white;
-    color:navy;
+    color: navy;
     border-color: navy;
     width: 60%;
     padding-bottom: 5px;
-    height:100%;
+    height: 100%;
 
 }
 
 .admin_form_button {
     background-color: navy;
-    color:whitesmoke;
+    color: whitesmoke;
     border-color: white;
     width: 60%;
     padding-bottom: 5px;
-    height:100%;
+    height: 100%;
 
 }
 
 .admin_button {
-    height:70px;
-    border:none;
+    height: 70px;
+    border: none;
     margin-bottom: 5px;
     padding-bottom: 5px;
 }
 
 .admin_button:hover {
 
-    border:none;
+    border: none;
     margin-bottom: 5px;
     padding-bottom: 5px;
 }
 
 p1 {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 33px;
-    display:grid;
+    display: grid;
     text-align: center;
     color: navy;
-    border:2px solid navy;
+    border: 2px solid navy;
     margin-left: 7%;
     margin-right: 7%;
     padding-top: 8px;
 }
 
 h1 {
-    color:navy;
-    border:3px solid navy;
-    border-style:dashed;
+    color: navy;
+    border: 3px solid navy;
+    border-style: dashed;
     outline: 10px solid navy;
     outline-offset: 4px;
     outline-width: 10px;
@@ -154,13 +154,13 @@ h1 {
 }
 
 h2 {
-    color:navy;
+    color: navy;
     font-size: 30px;
     text-align: center;
 }
 
 h3 {
-    color:navy;
+    color: navy;
     font-size: 25px;
     text-align: center;
 }
@@ -171,15 +171,15 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #777777;
-  }
-  
-  li {
+}
+
+li {
     float: left;
     background-color: navy;
-  }
- 
+}
 
-  li a {
+
+li a {
     border: none;
     border-right: 3px solid navy;
     display: block;
@@ -188,20 +188,20 @@ ul {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  
+}
 
-  li a:hover {
+
+li a:hover {
     background-color: navy;
     color: white;
     border-color: white;
-  }
+}
 
 
 img {
-    border:none;
+    border: none;
     display: block;
-    width:25%;
+    width: 25%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 9px;
@@ -209,7 +209,7 @@ img {
 }
 
 .site_body {
-    border:3px solid Navy;
+    border: 3px solid Navy;
     background-color: gainsboro;
     margin-left: 30px;
     margin-right: 30px;
@@ -218,7 +218,7 @@ img {
 }
 
 .user_home {
-    border:3px solid Navy;
+    border: 3px solid Navy;
     background-color: gainsboro;
     width: 900px;
     margin-left: auto;
@@ -231,7 +231,7 @@ img {
 
     font-size: 25px;
     text-decoration-color: rgba(8, 175, 78, 0.664);
-    color:rgb(11, 207, 122);
+    color: rgb(11, 207, 122);
     background-color: rgb(255, 255, 255);
     border-bottom: 3px solid navy;
     border-color: navy;
@@ -240,9 +240,9 @@ img {
 table {
     border: 3px solid navy;
     text-align: center;
-    width: 75%;                  
-    margin: 0 auto;              
-    table-layout: fixed;         
+    width: 75%;
+    margin: 0 auto;
+    table-layout: fixed;
     border-collapse: collapse;
     word-wrap: break-word;
 }
@@ -262,26 +262,26 @@ th, td {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
-    font-size:25px;
+    font-size: 25px;
     align-items: center;
-  }
+}
 
 tr {
     color: navy;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
-    font-size:25px
+    font-size: 25px
 }
 
 
-.gender{
+.gender {
     align-content: center;
     text-decoration: none;
 }
 
 .login_form {
-    color:navy;
+    color: navy;
     background-color: whitesmoke;
     border: 3px solid navy;
     font-size: 25px;
@@ -296,15 +296,15 @@ tr {
 .miniform {
     padding: 0px;
     margin: 0px;
-    width:fit-content;
+    width: fit-content;
     background-color: navy;
     color: navy;
-    border-color:navy;
+    border-color: navy;
     color: whitesmoke;
     text-transform: capitalize;
     text-align: center;
     font-size: 23px;
-    
+
 }
 
 .form_text {
@@ -320,7 +320,7 @@ select {
 }
 
 .reserve_form {
-    color:navy;
+    color: navy;
     background-color: whitesmoke;
     border: 3px solid navy;
     font-size: 25px;
@@ -333,7 +333,7 @@ select {
 }
 
 form {
-    color:navy;
+    color: navy;
     background-color: whitesmoke;
     border: 3px solid navy;
     font-size: 25px;
@@ -346,7 +346,7 @@ form {
 input[type=text], input[type=number], input[type=password], input[type=datetime-local] {
     background-color: whitesmoke;
     border: 1px solid navy;
-    color:navy;
+    color: navy;
     margin-top: 3px;
     margin-bottom: 3px;
     border-bottom: 3px solid navy;
@@ -366,23 +366,23 @@ p2 {
 
 
 input[type=submit] {
-    width:auto;
-    height:33px;
+    width: auto;
+    height: 33px;
     font-size: 23px;
     background-color: navy;
     color: navy;
-    border-color:navy;
+    border-color: navy;
     color: whitesmoke;
     text-transform: capitalize;
 
 }
 
 input[type=submit]:hover {
-    width:auto;
-    height:33px;
+    width: auto;
+    height: 33px;
     font-size: 23px;
     background-color: whitesmoke;
-    border-color:navy;
+    border-color: navy;
     color: navy;
     text-transform: capitalize;
 }
@@ -398,30 +398,28 @@ p {
     color: navy;
 }
 
-.ball { 
-    width: 100px; 
-    height: 100px; 
-    border-radius: 50%; 
-    background-color: white; 
-    animation: bounce 3s; 
-    animation-direction: alternate; 
-    animation-timing-function: cubic-bezier(.5, 0.05, 1, .5); 
-    animation-iteration-count: infinite; 
-} 
-  
-@keyframes bounce { 
-    from { 
-        transform: translate3d(0, 10px, 0); 
-    } 
-    to { 
-        transform: translate3d(1820px, 10px, 0); 
-    } 
-} 
+.ball {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    animation: bounce 3s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    from {
+        transform: translate3d(0, 10px, 0);
+    }
+
+    to {
+        transform: translate3d(1820px, 10px, 0);
+    }
+}
 
 .button {
     margin-bottom: 5px;
     margin-top: 5px;
 }
-  
-
-
