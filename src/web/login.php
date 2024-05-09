@@ -1,6 +1,6 @@
 <?php
 session_start();
-$authenticated = false;
+$authenticated = -1;
 if (isset($_POST['submit']) && $_POST['submit'] == "submit") {
     $user = $_POST['user'];
     $pwd = $_POST['pwd'];
@@ -28,8 +28,6 @@ if (isset($_POST['submit']) && $_POST['submit'] == "submit") {
         $result = pg_fetch_object($res);
         if ($result) {
             $authenticated = $result->verify;
-            echo $authenticated;
-
             if ($authenticated == 2) {
                 header('location:admin.php');
                 $_SESSION["admin"] = 1;
