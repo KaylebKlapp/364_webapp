@@ -27,7 +27,7 @@
             </h2>
             
     
-            <p1>Welcome to Space-A!
+            <p1 class="user_home">Welcome to Space-A!
                 <br><br>
                 <button class = "user_button" onclick="window.location.href='user_reserved.php'">My Reserved Flights</button>
                 <br>
