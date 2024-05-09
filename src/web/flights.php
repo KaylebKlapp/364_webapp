@@ -35,7 +35,8 @@ $departure_location = $_POST['departure'];
     <nav>
         <ul class="navtxt">
             <li><a href="user_home.php">User Home</a></li>
-            <li><a href = logout.php>Log Out</a></li> 
+            <li><a href = logout.php>Log Out</a></li>
+            <?php if($_SESSION["admin"]==1){echo "<li><a href = admin.php>Admin Menu</a></li>";}?>
         </ul>
     </nav>
 
