@@ -13,7 +13,6 @@ if (isset($_POST['update']) && $_POST['update'] == "Update") {
     $dodid = $_POST['dodid'];
 
     // Establish credentials for database
-    session_start();
     $dbHost = 'localhost';
     $dbPort = '5432';
     $dbName = 'space-a';

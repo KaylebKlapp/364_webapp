@@ -13,7 +13,6 @@ if (isset($_POST['remove']) && $_POST['remove'] == "Remove") {
     $flight_id = $_POST['flight_id'];
 
     // Establish credentials for database
-    session_start();
     $dbHost = 'localhost';
     $dbPort = '5432';
     $dbName = 'space-a';

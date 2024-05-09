@@ -135,6 +135,7 @@ p1 {
     margin-left: 7%;
     margin-right: 7%;
     padding-top: 8px;
+    background-color: white;
 }
 
 h1 {
@@ -219,7 +220,7 @@ img {
 
 .user_home {
     border: 3px solid Navy;
-    background-color: gainsboro;
+    background-color: white;
     width: 900px;
     margin-left: auto;
     margin-right: auto;

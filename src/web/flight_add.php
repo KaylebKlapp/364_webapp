@@ -19,7 +19,6 @@ if (isset($_POST['add']) && $_POST['add'] == "Add") {
     $arrival_time = $_POST['arrival'];
 
     // Establish credentials for database
-    session_start();
     $dbHost = 'localhost';
     $dbPort = '5432';
     $dbName = 'space-a';

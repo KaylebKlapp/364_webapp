@@ -12,7 +12,6 @@ if (isset($_POST['delete']) && $_POST['delete'] == "Delete") {
     $airport_id = $_POST['airport_id'];
 
     // Establish credentials for database
-    session_start();
     $dbHost = 'localhost';
     $dbPort = '5432';
     $dbName = 'space-a';
