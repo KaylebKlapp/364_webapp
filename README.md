@@ -17,5 +17,5 @@ CREATE DATABASE "space-a"
     IS_TEMPLATE = False;
 
 2) Run the following command in our repo's directory in your terminal 
-"psql space-a < space-a_20240508.sql" 
+"psql space-a < space-a_20240507.sql" 
 Directory should be something like: "/home/student/public_html/364_webapp/src/web"
