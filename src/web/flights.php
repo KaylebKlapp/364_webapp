@@ -60,7 +60,7 @@ $departure_location = $_POST['departure'];
             <?php
             $query = "SELECT 
                 a1.airport_location AS \"Departure Location\",
-                a2.airport_location AS \"Arrival Location\",
+                a2.airport_location as \"Arrival Location\",
                 p.model AS \"Aircraft Type\",
                 f.departure_date AS \"Departure Date\",
                 f.departure_time as \"Departure Time\",
