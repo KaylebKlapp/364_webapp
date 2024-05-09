@@ -25,6 +25,7 @@
     </head>
     <body>
         <h1>Space Available Reservation Application</h1>
+        <div class="site_body">
         <nav>
             <ul class = "navtxt">
                 <li><a href = user_home.php>User Home</a></li> 
@@ -88,6 +89,7 @@
                 }
             ?>
         </table>
+            </div>
     </body>
 
 </html>

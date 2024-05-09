@@ -31,6 +31,7 @@ $departure_location = $_POST['departure'];
 </head>
 <body>
     <h1>Space Available Reservation Application</h1>
+    <div class="site_body">
     <nav>
         <ul class="navtxt">
             <li><a href="user_home.php">User Home</a></li>
@@ -100,5 +101,6 @@ $departure_location = $_POST['departure'];
             }
         ?>
     </table>
+        </div>
 </body>
 </html>
